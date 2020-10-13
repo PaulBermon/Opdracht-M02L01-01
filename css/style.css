@@ -1,0 +1,107 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	display: inline-flex;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+	font-weight: 600;
+	color: darkgray;
+}
+
+p {
+	font-size: 1.2em;
+	font-weight: 600;
+	color: dimgrey;
+}
+
+/* CSS card positioning*/
+.cardcontainer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	width: 450px;
+	border: 2px solid lightgrey;
+	border-radius: 8px;
+	margin: 2em 0em 0em 2em;
+	box-shadow: 4px 7px 14px -9px rgba(0, 0, 0, 0.28);
+}
+
+.cardcontainer__cardheader {
+	grid-area: 1 / 1 / 1 / 4;
+	padding: 1em 0em 0em 2em ;
+}
+
+.cardcontainer__cardheader > h2 {
+	grid-area: 1 / 1 / 1 / 3;
+}
+
+.cardcontainer__profilepicture {
+	grid-area: 1 / 4;
+	justify-self: right;
+	padding: 1em;
+}
+
+.cardcontainer__cardmessage {
+	grid-area: 2 / 1 / 2 / 5;
+	border-bottom: 1px solid lightgrey;
+	padding: 0em 0em 0em 2em ;
+	max-height: 5em;
+}
+
+.cardcontainer__buttons {
+	display: flex;
+	grid-area: 3 / 1 / 3 / 5;
+	padding: 0em 1em 1em 1em;
+	text-align: center;
+}
+
+.cardcontainer__buttons > div {
+	display: flex;
+	min-width: 50%;
+	margin: 0 auto;
+	margin-right: -2px;
+}
+
+.cardcontainer__buttonApprove {
+	border: 2px solid limegreen;
+	border-radius: 4px 0px 0px 4px;
+}
+
+.cardcontainer__buttonDecline {
+	color: red;
+	border: 2px solid red;
+	border-radius: 0px 4px 4px 0px;
+}
+
+.cardcontainer__buttons a {
+	font-size: 1.3em;
+	font-weight: 600;
+    text-decoration:none;
+	text-shadow:none;
+	margin: 0 auto;
+	padding: 0.2em;
+}
+
+.cardcontainer__buttonApprove > a {
+	color: limegreen;
+}
+
+.cardcontainer__buttonDecline > a {
+	color:red; 
+}
+
+.cardcontainer__cardmessage span {
+	font-weight: bold;
+}
